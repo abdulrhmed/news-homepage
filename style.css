@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+:root{
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    position: relative;  
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+ 
+
+
+
+/* :start header  */
+
+header{
+    margin-top: 20px ;
+    margin-bottom: 30px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 50px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+ul li{
+    list-style: none;
+
+}
+ul li a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    transition: 0.3s;
+}
+ul li a:hover {
+    color: var(--Soft-red);
+}
+.icon,.close{
+    display: none;
+}
+.mohamde{
+    position: relative;
+}
+/* :end header  */
+
+/* :start main  */
+.main{
+    margin-bottom: 40px;
+}
+.abdo{
+    display: flex;
+    justify-content: space-between;
+
+}
+.left{
+    width: 60%;
+}
+.right{
+    width: 37%;
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 20px;
+}
+.right h1{
+    margin-bottom: 25px;
+    color: var(--Soft-orange);
+    font-weight: bold;
+}
+.img img{
+    width: 100%;
+}
+.box{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.box .h{
+    width: 45%;
+}
+.box .h h1{
+    font-size: 38px;
+    font-weight: bold;
+}
+.box .p{
+    width: 50%;
+    margin-bottom: 30px;
+}
+.box .p p{
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.box .p button{
+    padding: 10px 23px;
+    border: none;
+    background: var(--Soft-red);
+    color: var(--Off-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.box .p button:hover{
+    background-color: var(--Very-dark-blue);
+}
+.boxs .box{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.boxs .box:not(:nth-child(3)){
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+    padding-bottom: 20px;
+}
+.boxs .box p:first-child{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.boxs .box p:first-child:hover{
+    color: var(--Soft-orange);
+}
+.boxs .box p:last-child{
+    font-size: 11px;
+    color: var(--Grayish-blue);
+}
+
+.main .you{
+    display: none;
+}
+
+/* end main  */
+
+
+/* start footer  */
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.book{
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+}
+.book:not(:nth-child(3)){
+    margin-right: 15px;
+
+}
+.book .imgr{
+    width: 30%;
+
+}
+.book .imgr img{
+    width: 100%;
+    height: 100%;
+}
+.book .text{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book .text p:nth-child(1){
+    font-size: 23px;
+    font-weight: 200;
+    color: var(--Grayish-blue);
+}
+.book .text p:nth-child(2){
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.book .text p:nth-child(3){
+    font-size: 10px;
+    line-height: 1.5;
+}
+.book .text p:nth-child(2):hover{
+    color: var(--Soft-red);
+}
+/* end footer  */
+
+/* start res  */
+@media (max-width: 320px),(max-width: 786px){
+
+    ul{
+        display: none;
+    }
+    .icon{
+        display: flex;
+        cursor: pointer;
+        width: 30px;
+    }
+    .close{
+        display: inline;
+        position: absolute;
+        right: 0;
+    }
+    .img img{
+        display: none;
+    }
+    .main .you{
+        display: flex;
+    }
+    .abdo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+    .right {
+        width: 100%;
+    }
+    .left {
+         width: 100%; 
+    }
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .book {
+        display: flex;
+        height: 100%;
+        justify-content: flex-start;
+    }
+    .book .text {
+        width: 100%;
+
+    }
+    .book:not(:nth-child(3)){
+        margin-right: 0;
+    
+    }
+    .book{
+        margin-bottom: 30px;
+    }
+    .book .imgr {
+        margin-right: 20px;
+    }
+}
+@media (min-width: 786px){
+    .saidbar{
+        display: none;
+    }
+    .overlay{
+        display: none;
+    }
+}
+
+/* end res  */
+
+
+/* :start .saidbar  */
+.saidbar{
+    position: absolute;
+    width: 50%;
+    background: var(--Off-white);
+    height: 100vh;
+    right: 0px;
+    z-index: 1;
+    top: -20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+}
+
+.saidbar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 150px;
+    position: absolute;
+}
+.saidbar ul li {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+
+.saidbar ul li a{
+    color: var(--Very-dark-blue);
+    font-size: 18px;
+    font-weight: 600;
+}
+.saidbar ul li a:hover{
+    color: var(--Soft-red);
+}
+.close{
+    display: inline;
+    margin: 21px;
+    cursor: pointer;
+    width: 30px;
+}
+/* :end .saidbar  */
+.overlay{
+    background: hsl(240deg 100% 5% / 37%);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+
+}
